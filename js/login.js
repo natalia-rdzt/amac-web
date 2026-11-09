@@ -1,6 +1,4 @@
-// Mejora opcional (JavaScript no es obligatorio en esta entrega).
-// Sin JavaScript: el formulario envía a index.html y "Crear cuenta"
-// lleva al registro de trabajador.
+
 (function () {
   var formulario = document.getElementById("form-login");
   var enlaceCrear = document.getElementById("enlace-crear-cuenta");
