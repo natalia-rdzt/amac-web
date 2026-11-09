@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAC: bolsa de trabajo para adultos mayores.">
+  <title>Crear cuenta de candidato | AMAC</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="logo" href="index.html"><img class="logo__imagen" src="img/logo.svg" alt="" width="40" height="20"><span>AMAC</span></a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="index.html">Trabajos</a></li><li><a class="nav-principal__enlace" href="mis-solicitudes.html">Mis solicitudes</a></li><li><a class="nav-principal__enlace" href="login.html"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="principal">
+    <div class="contenedor contenedor--medio">
+      <section class="tarjeta" aria-labelledby="titulo-registro">
+        <div class="pasos"><p class="pasos__texto">Pasos 1 y 2 de 4</p><div class="pasos__puntos" aria-hidden="true"><span class="pasos__punto pasos__punto--activo"></span><span class="pasos__punto pasos__punto--activo"></span><span class="pasos__punto"></span><span class="pasos__punto"></span></div></div>
+        <p class="etiqueta-seccion">Cuenta de candidato</p>
+        <h1 id="titulo-registro">Crear cuenta como trabajador</h1>
+        <p class="texto-suave">Los campos con <span class="campo-formulario__obligatorio" aria-hidden="true">*</span><span class="solo-lector">asterisco</span> son obligatorios.</p>
+
+        <form class="formulario" action="registro-candidato-experiencia.html" method="get">
+          <fieldset class="grupo-campos">
+            <legend>¿Cómo contactarte?</legend>
+            <div class="rejilla-formulario">
+            <div class="campo-formulario">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" aria-describedby="correo-ayuda" autocomplete="email">
+              <p class="campo-formulario__ayuda" id="correo-ayuda">Ejemplo: nombre@correo.com</p>
+            </div>
+            <div class="campo-formulario">
+              <label for="celular">Número de celular</label>
+              <input type="tel" id="celular" name="celular" aria-describedby="celular-ayuda" autocomplete="tel" inputmode="numeric">
+              <p class="campo-formulario__ayuda" id="celular-ayuda">10 dígitos</p>
+            </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo-campos">
+            <legend>Datos personales</legend>
+            <div class="rejilla-formulario">
+            <div class="campo-formulario">
+              <label for="nombres">Nombre(s) <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="nombres" name="nombres" autocomplete="given-name" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="apellido-paterno">Apellido paterno <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="apellido-paterno" name="apellido-paterno" autocomplete="family-name" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="apellido-materno">Apellido materno</label>
+              <input type="text" id="apellido-materno" name="apellido-materno">
+            </div>
+            <div class="campo-formulario">
+              <label for="edad">Edad <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <input type="number" id="edad" name="edad" min="18" max="110" inputmode="numeric" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="sexo">Sexo <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <select id="sexo" name="sexo" required>
+                <option value="">Selecciona una opción</option>
+              <option>Mujer</option>
+              <option>Hombre</option>
+              <option>Prefiero no decirlo</option>
+              </select>
+            </div>
+            <div class="campo-formulario">
+              <label for="calle">Calle y número <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="calle" name="calle" autocomplete="street-address" required>
+            </div>
+            <div class="campo-formulario">
+              <label for="colonia">Colonia <span class="campo-formulario__obligatorio" aria-hidden="true">*</span></label>
+              <input type="text" id="colonia" name="colonia" autocomplete="address-level3" required>
+            </div>
+            </div>
+          </fieldset>
+          <div class="fila fila--fin">
+            
+            <button class="boton boton--primario" type="submit">Siguiente <svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p>AMAC · Bolsa de trabajo para adultos mayores</p>
+      <p>Envejecer es vivir</p>
+    </div>
+  </footer>
+  <div class="boton-ayuda">
+    <a class="boton boton--primario boton--ayuda" href="tel:+528100000000">
+      <span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> ¿Necesitas ayuda?</span>
+      <small>Llama aquí</small>
+    </a>
+  </div>
+</body>
+</html>
