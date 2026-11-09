@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAC: bolsa de trabajo para adultos mayores.">
+  <title>Vacantes disponibles | AMAC</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="logo" href="index.html"><img class="logo__imagen" src="img/logo.svg" alt="" width="40" height="20"><span>AMAC</span></a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="index.html" aria-current="page">Trabajos</a></li><li><a class="nav-principal__enlace" href="mis-solicitudes.html">Mis solicitudes</a></li><li><a class="nav-principal__enlace" href="login.html"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Iniciar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="principal" class="principal--hero">
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenedor pila">
+        <h1 id="titulo-hero">Encuentra un trabajo que se adapte a ti</h1>
+        <p>Empleos pensados para adultos mayores.</p>
+        <form class="buscador" action="index.html" role="search" aria-label="Buscar vacantes">
+          <div class="campo-formulario">
+            <label for="buscar-puesto">¿Qué trabajo buscas?</label>
+            <input type="search" id="buscar-puesto" name="puesto" placeholder="Puesto, empresa o ciudad">
+          </div>
+          <div class="campo-formulario">
+            <label for="buscar-ciudad">Ciudad o estado</label>
+            <input type="text" id="buscar-ciudad" name="ciudad" value="Monterrey" autocomplete="address-level2">
+          </div>
+          <button class="boton boton--primario" type="submit"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg> Buscar empleos</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="seccion-empleos" aria-labelledby="titulo-empleos">
+      <div class="contenedor">
+        <div class="encabezado-pagina">
+          <h2 class="titulo-seccion" id="titulo-empleos">Empleos disponibles</h2>
+          <p class="texto-suave">6 resultados</p>
+        </div>
+
+        <div class="catalogo">
+          <aside class="tarjeta filtros" aria-labelledby="titulo-filtros">
+            <h2 id="titulo-filtros">Filtros</h2>
+            <form class="formulario" action="index.html">
+              <div class="campo-formulario">
+                <label for="filtro-jornada">Tipo de jornada</label>
+                <select id="filtro-jornada" name="jornada">
+                  <option>Todas</option>
+              <option>Tiempo completo</option>
+              <option>Medio tiempo</option>
+              <option>Matutino</option>
+              <option>Vespertino</option>
+              <option>Fines de semana</option>
+                </select>
+              </div>
+              <div class="campo-formulario">
+                <label for="filtro-categoria">Categoría de empleo</label>
+                <select id="filtro-categoria" name="categoria">
+                  <option>Todas</option>
+              <option>Administración</option>
+              <option>Ventas</option>
+              <option>Atención a clientes</option>
+              <option>Servicios</option>
+              <option>Cuidado y vigilancia</option>
+                </select>
+              </div>
+              <div class="campo-formulario">
+                <label for="filtro-fecha">Fecha de publicación</label>
+                <select id="filtro-fecha" name="fecha">
+                  <option>Cualquier fecha</option>
+              <option>Hoy</option>
+              <option>Última semana</option>
+              <option>Último mes</option>
+                </select>
+              </div>
+              <button class="boton boton--marino boton--completo" type="submit">Aplicar filtros</button>
+              <a href="index.html">Limpiar filtros</a>
+            </form>
+          </aside>
+
+          <ul class="lista-vacantes lista-vacantes--filas">
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hoy</p>
+                <h3 class="tarjeta-vacante__titulo">Asistente administrativo</h3>
+                <p class="tarjeta-vacante__empresa">Servicios del Norte</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>Monterrey, Nuevo León</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Tiempo completo</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>10,000 – 12,000 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Asistente administrativo, Servicios del Norte</span></a>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hace 4 días</p>
+                <h3 class="tarjeta-vacante__titulo">Vendedor de mostrador</h3>
+                <p class="tarjeta-vacante__empresa">Ferretería La Central</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>San Nicolás de los Garza, N.L.</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Medio tiempo</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>8,000 – 10,000 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Vendedor de mostrador, Ferretería La Central</span></a>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hace 2 semanas</p>
+                <h3 class="tarjeta-vacante__titulo">Recepcionista</h3>
+                <p class="tarjeta-vacante__empresa">Hotel Plaza Monterrey</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>Centro, Monterrey</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Matutino</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>9,000 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Recepcionista, Hotel Plaza Monterrey</span></a>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hace 3 semanas</p>
+                <h3 class="tarjeta-vacante__titulo">Auxiliar de archivo</h3>
+                <p class="tarjeta-vacante__empresa">Grupo Delmonte</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>San Pedro Garza García, N.L.</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Medio tiempo</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>7,500 – 9,000 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Auxiliar de archivo, Grupo Delmonte</span></a>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hace 1 mes</p>
+                <h3 class="tarjeta-vacante__titulo">Cuidador de museo</h3>
+                <p class="tarjeta-vacante__empresa">Museo del Noreste</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>Monterrey, Nuevo León</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Fines de semana</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>6,500 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Cuidador de museo, Museo del Noreste</span></a>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-vacante">
+              <div class="tarjeta-vacante__info">
+                <p class="tarjeta-vacante__fecha">Publicada hace 1 mes</p>
+                <h3 class="tarjeta-vacante__titulo">Asesor telefónico</h3>
+                <p class="tarjeta-vacante__empresa">Clínica Montemar</p>
+                <ul class="tarjeta-vacante__datos">
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><span class="solo-lector">Ubicación: </span>Guadalupe, Nuevo León</li>
+                  <li><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span class="solo-lector">Jornada: </span>Tiempo completo</li>
+                </ul>
+                <p class="tarjeta-vacante__sueldo"><span class="signo-pesos" aria-hidden="true">$</span><span class="solo-lector">Sueldo: </span>9,500 – 11,000 al mes</p>
+              </div>
+              <a class="boton boton--secundario" href="vacante.html">Ver vacante<span class="solo-lector">: Asesor telefónico, Clínica Montemar</span></a>
+            </article>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p>AMAC · Bolsa de trabajo para adultos mayores</p>
+      <p>Envejecer es vivir</p>
+    </div>
+  </footer>
+  <div class="boton-ayuda">
+    <a class="boton boton--primario boton--ayuda" href="tel:+528100000000">
+      <span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> ¿Necesitas ayuda?</span>
+      <small>Llama aquí</small>
+    </a>
+  </div>
+</body>
+</html>
