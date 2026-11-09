@@ -1,0 +1,46 @@
+/* Design tokens tomados del prototipo de Figma (Entrega 1) */
+:root {
+  /* Colores */
+  --color-primario: #ff7f5c;          /* naranja de botones */
+  --color-primario-oscuro: #f2653e;   /* hover del botón */
+  --color-marino: #1f2a44;            /* texto, pie de página, hero */
+  --color-texto: #1f2a44;
+  --color-texto-suave: #374151;       /* gris oscuro, contraste ~10:1 */
+  --color-fondo: #ffffff;
+  --color-fondo-pagina: #f1f6fa;
+  --color-borde: #c3ccd6;
+  --color-enlace: #1f2a44;
+  --color-acento: #316796;            /* azul de etiquetas y aro de foco */
+  --color-seleccion: #ffb9a3;         /* botón de rol seleccionado */
+
+  /* Estatus (fondo / texto) */
+  --estatus-enviada-fondo: #dbeafe;
+  --estatus-enviada-texto: #1e3a8a;
+  --estatus-revision-fondo: #fef3c7;
+  --estatus-revision-texto: #78350f;
+  --estatus-aceptada-fondo: #dcfce7;
+  --estatus-aceptada-texto: #14532d;
+  --estatus-rechazada-fondo: #fee2e2;
+  --estatus-rechazada-texto: #7f1d1d;
+  --estatus-deshabilitada-fondo: #fde8d4;
+  --estatus-deshabilitada-texto: #7c2d12;
+
+  /* Tipografía */
+  --fuente-base: "Work Sans", system-ui, sans-serif;
+  --fuente-titulos: "Libre Baskerville", Georgia, serif;
+  --texto-base: 1.125rem;   /* 18 px */
+  --texto-chico: 1rem;      /* 16 px */
+  --texto-h3: 1.25rem;
+  --texto-h2: 1.5rem;
+  --texto-h1: 2rem;
+
+  /* Espaciados y bordes */
+  --espacio-xs: 0.25rem;
+  --espacio-s: 0.5rem;
+  --espacio-m: 1rem;
+  --espacio-l: 2rem;
+  --espacio-xl: 3rem;
+  --radio: 0.75rem;
+  --sombra: 0 2px 10px rgb(31 42 68 / 12%);
+  --alto-minimo: 2.75rem;   /* 44 px mínimo táctil */
+}
