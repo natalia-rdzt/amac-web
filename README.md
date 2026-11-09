@@ -31,4 +31,4 @@ Tipografías: **Libre Baskerville** (títulos) y **Work Sans** (texto). Texto ba
 - `encabezado` / `nav-principal`, `pie`, `boton-ayuda`
 
 ## Publicación
-Sitio en Vercel: 
+Vercel:https://amac-web-rho.vercel.app
