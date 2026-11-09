@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAC: bolsa de trabajo para adultos mayores.">
+  <title>Solicitudes recibidas | AMAC</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="logo" href="index.html"><img class="logo__imagen" src="img/logo.svg" alt="" width="40" height="20"><span>AMAC</span></a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="empresa-vacantes.html">Panel de vacantes</a></li><li><a class="nav-principal__enlace" href="login.html"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="principal">
+    <div class="contenedor contenedor--medio pila">
+      <a class="boton boton--primario boton--redondo" href="empresa-vacantes.html" aria-label="Regresar al panel de vacantes"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+      <h1>Solicitudes recibidas</h1>
+      <h2 class="subtitulo-pagina">Vendedor de mostrador</h2>
+      <form class="rejilla-formulario" action="solicitudes-recibidas.html" aria-label="Filtros de solicitudes">
+            <div class="campo-formulario">
+              <label for="filtro-experiencia">Experiencia</label>
+              <select id="filtro-experiencia" name="filtro-experiencia">
+                <option value="">Selecciona una opción</option>
+              <option>Sin experiencia</option>
+              <option>De 1 a 2 años</option>
+              <option>De 2 a 5 años</option>
+              <option>Más de 5 años</option>
+              </select>
+            </div>
+            <div class="campo-formulario">
+              <label for="filtro-residencia">Lugar de residencia</label>
+              <select id="filtro-residencia" name="filtro-residencia">
+                <option value="">Selecciona una opción</option>
+              <option>Monterrey, N.L.</option>
+              <option>San Nicolás de los Garza, N.L.</option>
+              <option>Guadalupe, N.L.</option>
+              <option>San Pedro Garza García, N.L.</option>
+              </select>
+            </div>
+      </form>
+
+      <ul class="lista-registros">
+        <li>
+          <article class="tarjeta-candidato">
+            <header class="tarjeta-candidato__cabecera">
+              <span class="avatar" aria-hidden="true">RM</span>
+              <div>
+                <h3 class="tarjeta-candidato__nombre">Roberto Méndez</h3>
+                <p class="tarjeta-candidato__meta"><span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>64 años</span><span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>Monterrey, N.L.</span></p>
+              </div>
+            </header>
+            <dl class="tarjeta-candidato__datos">
+              <div><dt>Experiencia</dt><dd>Promotor de ventas en tienda departamental<br>De 2 a 5 años</dd></div>
+              <div><dt>Habilidades</dt><dd>Ventas, trato con clientes, manejo de caja</dd></div>
+              <div class="tarjeta-candidato__contacto"><dt>Medio de contacto</dt><dd><span class="etiqueta-estatus etiqueta-estatus--contacto"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>Teléfono</span></dd></div>
+            </dl>
+            <div class="tarjeta-candidato__acciones">
+              <a class="boton boton--secundario" href="#"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Ver perfil</a>
+              <a class="boton boton--secundario" href="#"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg> Ver CV</a>
+              <a class="boton boton--primario" href="cambiar-estatus.html">Cambiar estatus</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p>AMAC · Bolsa de trabajo para adultos mayores</p>
+      <p>Envejecer es vivir</p>
+    </div>
+  </footer>
+  <div class="boton-ayuda">
+    <a class="boton boton--primario boton--ayuda" href="tel:+528100000000">
+      <span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> ¿Necesitas ayuda?</span>
+      <small>Llama aquí</small>
+    </a>
+  </div>
+</body>
+</html>
