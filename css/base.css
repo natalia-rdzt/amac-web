@@ -1,4 +1,4 @@
-/* Reset, cuerpo, tipografía, enlaces y foco */
+
 *,
 *::before,
 *::after {
@@ -48,6 +48,10 @@ h1,
 h1 { font-size: var(--texto-h1); }
 h2 { font-size: var(--texto-h2); }
 h3 { font-size: var(--texto-h3); }
+
+@media (min-width: 768px) {
+  h1 { font-size: 2.5rem; }
+}
 
 p { margin: 0 0 var(--espacio-m); }
 
