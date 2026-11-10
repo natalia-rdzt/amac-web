@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AMAC: bolsa de trabajo para adultos mayores.">
+  <title>Vacante publicada | AMAC</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&amp;family=Work+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="logo" href="index.html"><img class="logo__imagen" src="img/logo.svg" alt="" width="40" height="20"><span>AMAC</span></a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul class="nav-principal__lista">
+          <li><a class="nav-principal__enlace" href="empresa-vacantes.html" aria-current="page">Panel de vacantes</a></li><li><a class="nav-principal__enlace" href="login.html"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Cerrar sesión</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="principal">
+    <div class="contenedor">
+      <div class="encabezado-pagina">
+        <div>
+          <h1>Tus vacantes</h1>
+          <p class="texto-suave">Administra tus publicaciones y revisa las solicitudes.</p>
+        </div>
+        <a class="boton boton--primario" href="nueva-vacante.html"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg> Nueva vacante</a>
+      </div>
+      <p class="aviso-exito" role="status"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg> Vacante publicada correctamente.</p>
+      <ul class="lista-registros">
+          <li>
+            <article class="fila-vacante">
+              <div class="fila-vacante__info">
+                <p><span class="etiqueta-estatus etiqueta-estatus--activa"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg>Activa</span></p>
+                <h2 class="fila-vacante__titulo">Asistente administrativo</h2>
+                <p class="fila-vacante__fecha">Publicada hoy</p>
+              </div>
+              <p class="fila-vacante__numero"><strong>14</strong><span>Solicitudes</span></p>
+              <div class="fila-vacante__acciones">
+                <a class="boton boton--secundario" href="#">Editar<span class="solo-lector">: Asistente administrativo</span></a>
+                <a class="boton boton--secundario" href="empresa-vacantes.html">Deshabilitar<span class="solo-lector">: Asistente administrativo</span></a>
+                <a class="boton boton--secundario" href="solicitudes-recibidas.html">Ver solicitudes<span class="solo-lector">: Asistente administrativo</span></a>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fila-vacante">
+              <div class="fila-vacante__info">
+                <p><span class="etiqueta-estatus etiqueta-estatus--activa"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6L9 17l-5-5"/></svg>Activa</span></p>
+                <h2 class="fila-vacante__titulo">Vendedor de mostrador</h2>
+                <p class="fila-vacante__fecha">Publicada hace 4 días</p>
+              </div>
+              <p class="fila-vacante__numero"><strong>9</strong><span>Solicitudes</span></p>
+              <div class="fila-vacante__acciones">
+                <a class="boton boton--secundario" href="#">Editar<span class="solo-lector">: Vendedor de mostrador</span></a>
+                <a class="boton boton--secundario" href="empresa-vacantes.html">Deshabilitar<span class="solo-lector">: Vendedor de mostrador</span></a>
+                <a class="boton boton--secundario" href="solicitudes-recibidas.html">Ver solicitudes<span class="solo-lector">: Vendedor de mostrador</span></a>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="fila-vacante">
+              <div class="fila-vacante__info">
+                <p><span class="etiqueta-estatus etiqueta-estatus--deshabilitada"><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 4H6v16h4zM18 4h-4v16h4z"/></svg>Deshabilitada</span></p>
+                <h2 class="fila-vacante__titulo">Recepcionista</h2>
+                <p class="fila-vacante__fecha">Publicada hace 2 semanas</p>
+              </div>
+              <p class="fila-vacante__numero"><strong>5</strong><span>Solicitudes</span></p>
+              <div class="fila-vacante__acciones">
+                <a class="boton boton--secundario" href="#">Editar<span class="solo-lector">: Recepcionista</span></a>
+                <a class="boton boton--secundario" href="empresa-vacantes.html">Reactivar<span class="solo-lector">: Recepcionista</span></a>
+                <a class="boton boton--secundario" href="solicitudes-recibidas.html">Ver solicitudes<span class="solo-lector">: Recepcionista</span></a>
+              </div>
+            </article>
+          </li>
+      </ul>
+    </div>
+  </main>
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p>AMAC · Bolsa de trabajo para adultos mayores</p>
+      <p>Envejecer es vivir</p>
+    </div>
+  </footer>
+  <div class="boton-ayuda">
+    <a class="boton boton--primario boton--ayuda" href="tel:+528100000000">
+      <span><svg class="icono" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg> ¿Necesitas ayuda?</span>
+      <small>Llama aquí</small>
+    </a>
+  </div>
+</body>
+</html>
