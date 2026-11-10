@@ -1,14 +1,13 @@
-/* Estructura: contenedor, encabezado, pie, rejillas */
+/* Estructura: contenedores, encabezado, pie, rejillas */
 .contenedor {
   width: min(100% - 2rem, 1200px);
   margin-inline: auto;
 }
 
-.contenedor--angosto { width: min(100% - 2rem, 640px); }
 .contenedor--medio { width: min(100% - 2rem, 840px); }
-.contenedor--minimo { width: min(100% - 2rem, 28rem); }
+.contenedor--angosto { width: min(100% - 2rem, 640px); }
 .contenedor--600 { width: min(100% - 2rem, 600px); }
-.contenedor--640 { width: min(100% - 2rem, 640px); }
+.contenedor--minimo { width: min(100% - 2rem, 28rem); }
 
 main {
   flex: 1;
@@ -96,11 +95,27 @@ main {
   z-index: 50;
 }
 
-/* Rejilla de vacantes (mobile-first) */
+/* Utilidades de disposición */
+.pila {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+.pila.texto-centro { align-items: center; }
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-m);
+}
+.fila--entre { justify-content: space-between; }
+.fila--fin { justify-content: flex-end; }
+
+/* Listado de vacantes: una fila por vacante */
 .lista-vacantes {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--espacio-l);
+  gap: var(--espacio-m);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -113,24 +128,11 @@ main {
   gap: var(--espacio-l);
 }
 
-.pila {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-m);
-}
+/* Separación bajo el hero del listado (~2.3 cm en escritorio) */
+.principal--hero { padding-top: 0; }
+.seccion-empleos { padding-top: var(--espacio-xl); }
 
-.fila {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--espacio-m);
-}
-
-.rejilla-datos {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--espacio-m);
-}
-
+.rejilla-datos,
 .rejilla-formulario {
   display: grid;
   grid-template-columns: 1fr;
@@ -138,30 +140,12 @@ main {
 }
 
 @media (min-width: 768px) {
-  .lista-vacantes { grid-template-columns: repeat(2, 1fr); }
-  .rejilla-datos { grid-template-columns: repeat(2, 1fr); }
+  .rejilla-datos,
   .rejilla-formulario { grid-template-columns: repeat(2, 1fr); }
-  .rejilla-formulario__completo { grid-column: 1 / -1; }
-  h1 { font-size: 2.5rem; }
+  .seccion-empleos { padding-top: 5.4rem; }
 }
 
 @media (min-width: 1024px) {
   .catalogo { grid-template-columns: 17rem 1fr; align-items: start; }
   .rejilla-datos { grid-template-columns: repeat(4, 1fr); }
 }
-
-/* Listado de vacantes en filas horizontales (una por renglón) */
-.lista-vacantes--filas { grid-template-columns: 1fr; gap: var(--espacio-m); }
-
-/* Separación bajo el hero del listado (~2.3 cm en escritorio) */
-.principal--hero { padding-top: 0; }
-.seccion-empleos { padding-top: var(--espacio-xl); }
-
-@media (min-width: 768px) {
-  .seccion-empleos { padding-top: 5.4rem; }
-}
-
-.pila.texto-centro { align-items: center; }
-
-.fila--entre { justify-content: space-between; }
-.fila--fin { justify-content: flex-end; }
