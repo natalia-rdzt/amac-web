@@ -1,6 +1,67 @@
-/* Componentes reutilizables (después serán componentes de React) */
+/* Componentes reutilizables 
 
-/* ---------- Botones ---------- */
+
+/* Caja con borde y esquinas redondeadas */
+.tarjeta,
+.tarjeta-vacante,
+.fila-solicitud,
+.fila-vacante,
+.tarjeta-candidato,
+.grupo-campos,
+.selector-rol__opcion label,
+.opcion-estatus {
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+/* Fondo blanco */
+.tarjeta,
+.tarjeta-vacante,
+.fila-solicitud,
+.fila-vacante,
+.tarjeta-candidato,
+.selector-rol__opcion label {
+  background: var(--color-fondo);
+}
+
+/* Filas y tarjetas anchas: mismo relleno */
+.tarjeta-vacante,
+.fila-solicitud,
+.fila-vacante,
+.tarjeta-candidato {
+  padding: var(--espacio-m) var(--espacio-l);
+}
+
+.tarjeta,
+.tarjeta-candidato {
+  box-shadow: var(--sombra);
+}
+
+/* Título de cada fila o tarjeta */
+.tarjeta-vacante__titulo,
+.fila-solicitud__titulo,
+.fila-vacante__titulo,
+.tarjeta-candidato__nombre {
+  margin: 0;
+  font-size: var(--texto-h3);
+}
+
+/* Nombre de la empresa */
+.tarjeta-vacante__empresa,
+.fila-solicitud__empresa {
+  margin: 0;
+  color: var(--color-texto-suave);
+}
+
+/* Iconos pequeños */
+.etiqueta-estatus .icono,
+.dato-vacante dt .icono,
+.tarjeta-candidato__meta .icono {
+  width: 1rem;
+  height: 1rem;
+}
+
+/*Botones */
 .boton {
   display: inline-flex;
   align-items: center;
@@ -60,62 +121,75 @@
 }
 .boton--ayuda small { font-size: var(--texto-chico); font-weight: 400; }
 
-.icono { width: 1.25rem; height: 1.25rem; flex: none; }
+/* Enlaces de al menos 44 px */
+.enlace-grande { display: inline-flex; align-items: center; min-height: var(--alto-minimo); }
 
-/* ---------- Tarjeta (base) ---------- */
-.tarjeta {
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
-  padding: var(--espacio-l);
-  box-shadow: var(--sombra);
-}
-
-/* ---------- Tarjeta de vacante (horizontal) ---------- */
-.tarjeta-vacante {
-  display: grid;
-  grid-template-columns: 1fr;
+.boton-cerrar {
+  display: inline-flex;
   align-items: center;
-  gap: var(--espacio-m);
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
+  justify-content: center;
+  width: var(--alto-minimo);
+  height: var(--alto-minimo);
+  border-radius: 50%;
+  color: var(--color-marino);
+}
+.boton-cerrar:hover { background: var(--color-fondo-pagina); }
+
+.icono { width: 1.25rem; height: 1.25rem; flex: none; }
+.icono--grande { width: 1.75rem; height: 1.75rem; }
+
+/* Icono dentro de un cuadro o un círculo */
+.icono-caja {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 3rem;
+  height: 3rem;
   border-radius: var(--radio);
-  padding: var(--espacio-m) var(--espacio-l);
+  background: var(--color-fondo-pagina);
+  color: var(--color-acento);
 }
+.icono-caja .icono { width: 1.5rem; height: 1.5rem; }
 
-@media (min-width: 768px) {
-  .tarjeta-vacante { grid-template-columns: 1fr auto; }
-}
-
-.tarjeta-vacante__info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-xs);
-}
-
-.tarjeta-vacante__fecha {
-  margin: 0;
-  font-size: var(--texto-chico);
-  font-weight: 600;
+.icono-circulo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--estatus-aceptada-fondo);
   color: var(--estatus-aceptada-texto);
 }
 
-.tarjeta-vacante__titulo { margin: 0; font-size: var(--texto-h3); }
-.tarjeta-vacante__empresa { margin: 0; color: var(--color-texto-suave); }
-
-.tarjeta-vacante__datos {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 var(--espacio-l);
-  color: var(--color-texto-suave);
+.avatar {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-marino);
+  color: #fff;
+  font-weight: 700;
 }
 
-.tarjeta-vacante__sueldo { margin: 0; font-weight: 600; }
+/* Base de Tarjeta */
+.tarjeta { padding: var(--espacio-l); }
 
-/* ---------- Etiqueta de estatus (ícono + texto) ---------- */
+/* Tarjetas con las medidas de Figma */
+.tarjeta--preferencia,
+.tarjeta--enviada {
+  justify-content: center;
+  gap: var(--espacio-l);
+  padding: 2.5rem;
+}
+.tarjeta--preferencia { min-height: 686.8px; }
+.tarjeta--enviada { min-height: 651.1px; }
+
+/*Etiqueta de estatus*/
 .etiqueta-estatus {
   display: inline-flex;
   align-items: center;
@@ -125,26 +199,50 @@
   font-weight: 600;
   border-radius: 999px;
 }
-.etiqueta-estatus .icono { width: 1rem; height: 1rem; }
 
-.etiqueta-estatus--enviada { background: var(--estatus-enviada-fondo); color: var(--estatus-enviada-texto); }
+.etiqueta-estatus--enviada,
+.etiqueta-estatus--contacto { background: var(--estatus-enviada-fondo); color: var(--estatus-enviada-texto); }
 .etiqueta-estatus--revision { background: var(--estatus-revision-fondo); color: var(--estatus-revision-texto); }
-.etiqueta-estatus--aceptada { background: var(--estatus-aceptada-fondo); color: var(--estatus-aceptada-texto); }
-.etiqueta-estatus--rechazada { background: var(--estatus-rechazada-fondo); color: var(--estatus-rechazada-texto); }
+.etiqueta-estatus--aceptada,
 .etiqueta-estatus--activa { background: var(--estatus-aceptada-fondo); color: var(--estatus-aceptada-texto); }
+.etiqueta-estatus--rechazada { background: var(--estatus-rechazada-fondo); color: var(--estatus-rechazada-texto); }
 .etiqueta-estatus--deshabilitada { background: var(--estatus-deshabilitada-fondo); color: var(--estatus-deshabilitada-texto); }
 
-/* ---------- Formularios ---------- */
+.etiqueta-seccion {
+  margin: 0 0 var(--espacio-xs);
+  font-size: var(--texto-chico);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
+.aviso-exito {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  margin: 0 0 var(--espacio-m);
+  padding: 0.75rem var(--espacio-m);
+  font-weight: 600;
+  color: var(--estatus-aceptada-texto);
+  background: var(--estatus-aceptada-fondo);
+  border-radius: var(--radio);
+}
+
+/*Formularios */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-l);
+}
+
 .campo-formulario {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-xs);
 }
 
-.campo-formulario label,
-.campo-formulario__etiqueta {
-  font-weight: 600;
-}
+.campo-formulario label { font-weight: 600; }
 
 .campo-formulario input,
 .campo-formulario select,
@@ -159,12 +257,15 @@
 
 .campo-formulario textarea { min-height: 7rem; resize: vertical; }
 
-.campo-formulario input[type="checkbox"],
-.campo-formulario input[type="radio"] {
-  width: 1.5rem;
-  min-height: 1.5rem;
-  padding: 0;
-  accent-color: var(--color-marino);
+/* Flecha de filtros */
+.campo-formulario select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 2.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f2a44' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
 }
 
 .campo-formulario__ayuda {
@@ -175,16 +276,31 @@
 
 .campo-formulario__obligatorio { color: #b91c1c; }
 
+/* Casillas */
+.campo-formulario input[type="checkbox"],
+.campo-formulario input[type="radio"],
+.opcion-estatus input {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  min-height: 0;
+  padding: 0;
+  accent-color: var(--color-marino);
+}
+
 .campo-formulario--casilla {
   flex-direction: row;
   align-items: flex-start;
-  gap: var(--espacio-s);
+  gap: 0;
 }
-.campo-formulario--casilla label { font-weight: 400; padding-top: 0.1rem; }
+.campo-formulario--casilla input { margin: 0.75rem 0 0; }
+.campo-formulario--casilla label {
+  flex: 1;
+  padding: 0.6rem 0 0.6rem var(--espacio-s);
+  font-weight: 400;
+}
 
 .grupo-campos {
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
   padding: var(--espacio-m);
   margin: 0;
   min-width: 0;
@@ -195,23 +311,22 @@
   font-weight: 600;
 }
 
-.formulario {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-l);
-}
-
-/* Selector de rol (login) */
-.selector-rol {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--espacio-s);
+/* Fieldsets sin borde ni relleno */
+.selector-rol,
+.grupo-opciones {
   border: 0;
   padding: 0;
   margin: 0;
 }
 
-.selector-rol__opcion { position: relative; }
+/* Selector de rol (login) y de medio de contacto */
+.selector-rol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--espacio-s);
+}
+
+.selector-rol__opcion { position: relative; display: flex; }
 
 .selector-rol__opcion input {
   position: absolute;
@@ -228,15 +343,15 @@
   align-items: center;
   justify-content: center;
   gap: var(--espacio-s);
+  flex: 1;
   min-height: 3rem;
   padding: 0.5rem;
   font-weight: 600;
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
   text-align: center;
 }
 
+/* Naranja al pasar el cursor y al elegirlo */
+.selector-rol__opcion input:hover + label,
 .selector-rol__opcion input:checked + label {
   background: var(--color-seleccion);
   border-color: var(--color-primario-oscuro);
@@ -247,7 +362,60 @@
   outline-offset: 3px;
 }
 
-/* ---------- Encabezado de sección (hero) ---------- */
+.selector-rol--vertical { grid-auto-rows: 1fr; }
+.selector-rol--vertical .selector-rol__opcion label {
+  flex-direction: column;
+  min-height: 5rem;
+}
+
+/* Cambiar estatus */
+.grupo-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+  min-width: 0;
+}
+.opcion-estatus {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+}
+.opcion-estatus input { margin: 0; }
+.opcion-estatus label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: var(--alto-minimo);
+  padding-left: var(--espacio-s);
+}
+
+/* Currículum  */
+.campo-archivo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-s) var(--espacio-m);
+}
+.campo-archivo .boton { cursor: pointer; }
+.campo-archivo input:focus-visible + .boton { outline: 3px solid var(--color-acento); outline-offset: 3px; }
+
+/* Indicador de registro*/
+.pasos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-m);
+  padding-bottom: var(--espacio-s);
+  margin-bottom: var(--espacio-m);
+  border-bottom: 1px solid var(--color-borde);
+}
+.pasos__texto { margin: 0; font-weight: 700; }
+.pasos__puntos { display: flex; gap: 0.4rem; }
+.pasos__punto { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #d1d5db; }
+.pasos__punto--activo { background: var(--color-primario); }
+
+/* Encabezados de sección*/
 .hero {
   background: var(--color-marino);
   color: #fff;
@@ -272,17 +440,108 @@
   .buscador { grid-template-columns: 1fr 1fr auto; }
 }
 
-/* ---------- Panel de filtros ---------- */
+/* Título del listado: Libre Baskerville, negritas, 42 px */
+.titulo-seccion { font-size: 2rem; font-weight: 700; }
+@media (min-width: 768px) {
+  .titulo-seccion { font-size: 2.625rem; }
+}
+
+.encabezado-pagina {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-m);
+  margin-bottom: var(--espacio-l);
+}
+.encabezado-pagina h1 { margin: 0; }
+
+.subtitulo-pagina { margin: 0; }
+
+/* Título con icono */
+.titulo-con-icono {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--espacio-xs) var(--espacio-m);
+  margin-bottom: var(--espacio-s);
+}
+.titulo-con-icono h1 { margin: 0; }
+.titulo-con-icono__empresa { grid-column: 2; margin: 0; }
+
+/* Filtros */
 .filtros { align-self: start; }
 .filtros h2 { font-size: var(--texto-h3); }
 
-/* ---------- Bloques de detalle ---------- */
+/* Listas de registros */
+.lista-registros {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-m);
+}
+
+/*Tarjeta de vacante*/
+.tarjeta-vacante {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: var(--espacio-m);
+}
+
+@media (min-width: 768px) {
+  .tarjeta-vacante { grid-template-columns: 1fr auto; }
+}
+
+.tarjeta-vacante__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-xs);
+}
+
+.tarjeta-vacante__fecha {
+  margin: 0;
+  font-size: var(--texto-chico);
+  font-weight: 600;
+  color: var(--estatus-aceptada-texto);
+}
+
+.tarjeta-vacante__datos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--espacio-l);
+  color: var(--color-texto-suave);
+}
+
+/* Datos con icono: ubicación, jornada y sueldo */
+.tarjeta-vacante__datos li,
+.tarjeta-vacante__sueldo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.tarjeta-vacante__datos .icono { width: 1.1rem; height: 1.1rem; }
+.tarjeta-vacante__sueldo { margin: 0; font-weight: 600; }
+.signo-pesos { width: 1.1rem; text-align: center; font-weight: 700; }
+
+/*Detalle de vacante*/
 .dato-vacante {
   padding: var(--espacio-m);
   background: var(--color-fondo-pagina);
   border-radius: var(--radio);
 }
-.dato-vacante dt { font-size: var(--texto-chico); color: var(--color-texto-suave); }
+.dato-vacante dt {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-s);
+  font-size: var(--texto-chico);
+  color: var(--color-texto-suave);
+}
 .dato-vacante dd { margin: 0; font-weight: 600; }
 
 .lista-check {
@@ -299,162 +558,35 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--espacio-m);
-  padding: var(--espacio-m);
-  background: var(--color-fondo-pagina);
-  border-radius: var(--radio);
-}
-.aviso-llamar p { margin: 0; }
-
-/* ---------- Tarjeta de solicitud / fila de vacante de empresa ---------- */
-.fila-registro {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-m);
-  padding: var(--espacio-m);
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
-}
-
-.fila-registro__titulo { margin: 0; font-size: var(--texto-h3); }
-.fila-registro__detalle { margin: 0; color: var(--color-texto-suave); }
-
-.fila-registro__acciones {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--espacio-s);
-}
-
-.fila-registro__numero {
-  margin: 0;
-  font-size: var(--texto-h2);
-  font-weight: 700;
-  line-height: 1.1;
-}
-.fila-registro__numero small { display: block; font-size: var(--texto-chico); font-weight: 400; color: var(--color-texto-suave); }
-
-@media (min-width: 768px) {
-  .fila-registro {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-  }
-}
-
-.lista-registros {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--espacio-m);
-}
-
-.encabezado-pagina {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   gap: var(--espacio-m);
-  margin-bottom: var(--espacio-l);
-}
-.encabezado-pagina h1 { margin: 0; }
-
-.etiqueta-seccion {
-  margin: 0 0 var(--espacio-xs);
-  font-size: var(--texto-chico);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-acento);
-}
-
-.indicador-paso {
-  margin: 0 0 var(--espacio-xs);
-  font-size: var(--texto-chico);
-  font-weight: 700;
-  color: var(--color-texto-suave);
-}
-
-/* ---------- Ajustes de la 2.ª ronda ---------- */
-
-/* Selector de rol / contacto: blanco, naranja al pasar el cursor y al elegirlo */
-.selector-rol__opcion input:hover + label {
-  background: var(--color-seleccion);
-  border-color: var(--color-primario-oscuro);
-}
-.selector-rol__opcion input:checked + label {
-  background: var(--color-seleccion);
-  border-color: var(--color-primario-oscuro);
-}
-.selector-rol--vertical .selector-rol__opcion label {
-  flex-direction: column;
-  min-height: 5rem;
-}
-
-/* Detalle de vacante */
-.titulo-con-icono {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-m);
-  margin-bottom: var(--espacio-s);
-}
-.titulo-con-icono h1 { margin: 0; }
-
-.icono-caja {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-  width: 3rem;
-  height: 3rem;
-  border-radius: var(--radio);
+  padding: var(--espacio-m);
   background: var(--color-fondo-pagina);
-  color: var(--color-acento);
+  border-radius: var(--radio);
 }
-.icono-caja .icono { width: 1.5rem; height: 1.5rem; }
+.aviso-llamar p { flex: 1 1 14rem; margin: 0; }
 
-.dato-vacante dt {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-s);
-}
-.dato-vacante dt .icono { width: 1rem; height: 1rem; }
-
-.aviso-llamar { justify-content: space-between; }
-.aviso-llamar p { flex: 1 1 14rem; }
-
-/* Confirmación */
-.icono-circulo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background: var(--estatus-aceptada-fondo);
-  color: var(--estatus-aceptada-texto);
-}
-.icono--grande { width: 1.75rem; height: 1.75rem; }
-
-/* Fila de solicitud (Mis solicitudes) */
+/*  Mis solicitudes */
 .fila-solicitud {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   gap: var(--espacio-s) var(--espacio-m);
-  padding: var(--espacio-m) var(--espacio-l);
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
 }
-.fila-solicitud__titulo { margin: 0; font-size: var(--texto-h3); }
-.fila-solicitud__empresa { margin: 0; color: var(--color-texto-suave); }
 .fila-solicitud__fecha { margin: 0; display: flex; flex-direction: column; line-height: 1.3; }
 .fila-solicitud__fecha span { font-size: var(--texto-chico); color: var(--color-texto-suave); }
 .fila-solicitud__estatus { margin: 0; }
-.fila-solicitud__acciones { display: flex; flex-wrap: wrap; gap: var(--espacio-s); }
+
+/* Botones*/
+.fila-solicitud__acciones,
+.tarjeta-candidato__acciones {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--espacio-s);
+}
+.fila-solicitud__acciones { width: min(100%, 14rem); }
+.fila-solicitud__acciones .boton,
+.tarjeta-candidato__acciones .boton { width: 100%; }
 
 @media (min-width: 768px) {
   .fila-solicitud { grid-template-columns: 1fr 1fr auto; }
@@ -462,82 +594,18 @@
 }
 
 @media (min-width: 1100px) {
-  .fila-solicitud { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) auto auto; }
-  .fila-solicitud__acciones { grid-column: auto; justify-content: flex-end; }
+  .fila-solicitud { grid-template-columns: minmax(0, 1fr) 9.5rem 9rem 14rem; }
+  .fila-solicitud__acciones { grid-column: auto; }
 }
 
-/* ---------- Ajustes de la 3.ª ronda ---------- */
-
-/* Título del listado: Libre Baskerville, negritas, 42 px */
-.titulo-seccion { font-size: 2rem; font-weight: 700; }
-@media (min-width: 768px) {
-  .titulo-seccion { font-size: 2.625rem; }
-}
-
-/* Datos de la tarjeta de vacante con iconos */
-.tarjeta-vacante__datos li {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.tarjeta-vacante__datos .icono { width: 1.1rem; height: 1.1rem; }
-.signo-pesos { width: 1.1rem; text-align: center; font-weight: 700; }
-.tarjeta-vacante__sueldo { font-weight: 600; color: var(--color-texto); }
-
-/* Flecha de los selectos un poco más a la izquierda */
-.campo-formulario select {
-  -webkit-appearance: none;
-  appearance: none;
-  padding-right: 2.75rem;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f2a44' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 1.25rem;
-}
-
-/* Detalle de vacante: empresa alineada bajo el título */
-.titulo-con-icono {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: var(--espacio-xs) var(--espacio-m);
-}
-.titulo-con-icono__empresa { grid-column: 2; margin: 0; }
-
-/* Opciones del mismo tamaño */
-.selector-rol__opcion { display: flex; }
-.selector-rol__opcion label { flex: 1; }
-.selector-rol--vertical { grid-auto-rows: 1fr; }
-
-/* Tarjetas con medidas de Figma */
-.tarjeta--preferencia,
-.tarjeta--enviada {
-  justify-content: center;
-  gap: var(--espacio-l);
-  padding: 2.5rem;
-}
-.tarjeta--preferencia { min-height: 686.8px; }
-.tarjeta--enviada { min-height: 651.1px; }
-
-/* Mis solicitudes: columnas fijas para que todo quede alineado */
-@media (min-width: 1100px) {
-  .fila-solicitud { grid-template-columns: minmax(0, 1fr) 9.5rem 9rem 20.5rem; }
-  .fila-solicitud__acciones { grid-column: auto; justify-content: flex-start; }
-}
-
-/* Panel de vacantes de la empresa */
+/*Panel de vacantes de la empresa*/
 .fila-vacante {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
   gap: var(--espacio-m);
-  padding: var(--espacio-m) var(--espacio-l);
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
 }
 .fila-vacante__info p { margin: 0 0 var(--espacio-xs); }
-.fila-vacante__titulo { margin: 0; font-size: var(--texto-h3); }
 .fila-vacante__info .fila-vacante__fecha { margin: 0; color: var(--color-texto-suave); font-size: var(--texto-chico); }
 .fila-vacante__numero { margin: 0; display: flex; flex-direction: column; line-height: 1.2; }
 .fila-vacante__numero strong { font-size: var(--texto-h2); }
@@ -553,50 +621,15 @@
   .fila-vacante__acciones { grid-column: auto; }
 }
 
-.aviso-exito {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-s);
-  margin: 0 0 var(--espacio-m);
-  padding: 0.75rem var(--espacio-m);
-  font-weight: 600;
-  color: var(--estatus-aceptada-texto);
-  background: var(--estatus-aceptada-fondo);
-  border-radius: var(--radio);
-}
-
-/* Solicitudes recibidas */
-.rejilla-formulario--tres { grid-template-columns: 1fr; }
-@media (min-width: 768px) {
-  .rejilla-formulario--tres { grid-template-columns: repeat(3, 1fr); }
-}
-
+/* Solicitudes recibidas*/
 .tarjeta-candidato {
   display: flex;
   flex-direction: column;
   gap: var(--espacio-m);
-  padding: var(--espacio-m) var(--espacio-l);
-  background: var(--color-fondo);
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
-  box-shadow: var(--sombra);
 }
-.tarjeta-candidato__cabecera { display: flex; align-items: center; gap: var(--espacio-m); }
-.tarjeta-candidato__cabecera > div { flex: 1; }
+.tarjeta-candidato__cabecera { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacio-m); }
+.tarjeta-candidato__cabecera > div { flex: 1 1 10rem; min-width: 0; }
 .tarjeta-candidato__estatus { margin: 0; }
-.avatar {
-  display: inline-flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: var(--color-marino);
-  color: #fff;
-  font-weight: 700;
-}
-.tarjeta-candidato__nombre { margin: 0; font-size: var(--texto-h3); }
 .tarjeta-candidato__meta {
   margin: 0;
   display: flex;
@@ -606,7 +639,6 @@
   color: var(--color-texto-suave);
 }
 .tarjeta-candidato__meta span { display: inline-flex; align-items: center; gap: 0.35rem; }
-.tarjeta-candidato__meta .icono { width: 1rem; height: 1rem; }
 .tarjeta-candidato__datos {
   display: grid;
   grid-template-columns: 1fr;
@@ -616,9 +648,6 @@
   background: var(--color-fondo-pagina);
   border-radius: var(--radio);
 }
-@media (min-width: 768px) {
-  .tarjeta-candidato__datos { grid-template-columns: repeat(3, 1fr); }
-}
 .tarjeta-candidato__datos dt {
   font-size: var(--texto-chico);
   font-weight: 700;
@@ -627,9 +656,14 @@
   color: var(--color-texto-suave);
 }
 .tarjeta-candidato__datos dd { margin: 0; }
-.etiqueta-estatus--contacto { background: var(--estatus-enviada-fondo); color: var(--estatus-enviada-texto); }
 
-/* Ventanas (modales) */
+@media (min-width: 768px) {
+  .tarjeta-candidato__datos { grid-template-columns: repeat(3, 1fr); }
+  .tarjeta-candidato__acciones { grid-template-columns: repeat(3, 1fr); }
+  .tarjeta-candidato__contacto { text-align: center; }
+}
+
+/* Ventanas */
 .modal-fondo {
   position: fixed;
   inset: 0;
@@ -660,66 +694,3 @@
 }
 .modal__cabecera h2 { margin: 0; }
 .modal__acciones { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--espacio-s); }
-.boton-cerrar {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--alto-minimo);
-  height: var(--alto-minimo);
-  border-radius: 50%;
-  color: var(--color-marino);
-}
-.boton-cerrar:hover { background: var(--color-fondo-pagina); }
-
-.grupo-opciones { display: flex; flex-direction: column; gap: var(--espacio-s); border: 0; padding: 0; margin: 0; min-width: 0; }
-.opcion-estatus {
-  display: flex;
-  align-items: center;
-  gap: var(--espacio-s);
-  padding: 0.25rem 0.75rem;
-  border: 2px solid var(--color-borde);
-  border-radius: var(--radio);
-}
-.opcion-estatus input { width: 1.5rem; height: 1.5rem; flex: none; accent-color: var(--color-marino); }
-.opcion-estatus label { flex: 1; display: flex; align-items: center; min-height: var(--alto-minimo); }
-
-/* ---------- Ajustes de la 4.ª ronda ---------- */
-
-/* Precio debajo de ubicación y jornada */
-.tarjeta-vacante__sueldo { display: flex; align-items: center; gap: 0.4rem; margin: 0; }
-
-/* Indicador de pasos del registro (texto + puntos) */
-.pasos {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--espacio-m);
-  padding-bottom: var(--espacio-s);
-  margin-bottom: var(--espacio-m);
-  border-bottom: 1px solid var(--color-borde);
-}
-.pasos__texto { margin: 0; font-weight: 700; }
-.pasos__puntos { display: flex; gap: 0.4rem; }
-.pasos__punto { width: 0.75rem; height: 0.75rem; border-radius: 50%; background: #d1d5db; }
-.pasos__punto--activo { background: var(--color-primario); }
-
-/* Campo de currículum con botón propio */
-.campo-archivo { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: var(--espacio-s) var(--espacio-m); }
-.campo-archivo .boton { cursor: pointer; }
-.campo-archivo input:focus-visible + .boton { outline: 3px solid var(--color-acento); outline-offset: 3px; }
-
-/* Mis solicitudes: botones apilados con el mismo largo */
-.fila-solicitud__acciones { display: grid; grid-template-columns: 1fr; width: min(100%, 14rem); }
-.fila-solicitud__acciones .boton { width: 100%; }
-@media (min-width: 1100px) {
-  .fila-solicitud { grid-template-columns: minmax(0, 1fr) 9.5rem 9rem 14rem; }
-}
-
-/* Solicitudes recibidas */
-.subtitulo-pagina { margin: 0; }
-.tarjeta-candidato__acciones { display: grid; grid-template-columns: 1fr; gap: var(--espacio-s); }
-.tarjeta-candidato__acciones .boton { width: 100%; }
-@media (min-width: 768px) {
-  .tarjeta-candidato__acciones { grid-template-columns: repeat(3, 1fr); }
-  .tarjeta-candidato__contacto { text-align: center; }
-}
